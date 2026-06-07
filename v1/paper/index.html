@@ -1,0 +1,3483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Zheng Lin Lei - Computer Engineer | Portfolio</title>
+
+    <meta
+      name="description"
+      content="Portfolio of Zheng Lin Lei, Computer Engineer specialized in full-stack development, DevOps, IoT, and open source. Explore technical reports, projects, and interactive 3D tech map."
+    />
+    <meta
+      name="keywords"
+      content="Zheng Lin Lei, Computer Engineer, Full-Stack, DevOps, PostgreSQL, pgcloud, ARIS-Radio, IoT, UAV, Portfolio, Open Source"
+    />
+    <meta name="author" content="Zheng Lin Lei" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      property="og:title"
+      content="Zheng Lin Lei - Computer Engineer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="High-performance engineer portfolio showcasing technical expertise, full-stack projects, system architecture, and open source contributions."
+    />
+    <meta property="og:url" content="https://zll.me/paper" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zheng Lin Lei Portfolio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zheng Lin Lei - Computer Engineer" />
+    <meta
+      name="twitter:description"
+      content="Full-stack architect, DevOps engineer, and open source contributor. Explore pgcloud, ARIS-Radio, and more."
+    />
+
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="apple-touch-icon" href="../img/favicon.png" />
+
+    <link crossorigin="" href="../css/paper.css" rel="stylesheet" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="Zheng Lin Lei Portfolio" name="apple-mobile-web-app-title" />
+    <link href="https://zll.me/paper" rel="canonical" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      body::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjMiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjZikiIG9wYWNpdHk9IjAuMDMiLz48L3N2Zz4=");
+        background-repeat: repeat;
+        opacity: 0.4;
+      }
+
+      .bg-blob {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.25;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .blob-1 {
+        top: -10%;
+        left: -5%;
+        width: 40vw;
+        height: 40vw;
+        background: radial-gradient(
+          circle,
+          rgba(255, 107, 53, 0.2) 0%,
+          rgba(255, 107, 53, 0) 70%
+        );
+      }
+
+      .blob-2 {
+        bottom: -10%;
+        right: -5%;
+        width: 35vw;
+        height: 35vw;
+        background: radial-gradient(
+          circle,
+          rgba(139, 139, 115, 0.15) 0%,
+          rgba(139, 139, 115, 0) 70%
+        );
+      }
+
+      .blob-3 {
+        top: 30%;
+        right: -10%;
+        width: 25vw;
+        height: 25vw;
+        background: radial-gradient(
+          circle,
+          rgba(232, 232, 227, 0.3) 0%,
+          rgba(232, 232, 227, 0) 70%
+        );
+      }
+
+      .diagonal-lines {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.02) 0px,
+          rgba(0, 0, 0, 0.02) 2px,
+          transparent 2px,
+          transparent 8px
+        );
+      }
+
+      ._blank {
+        margin-top: 50px;
+        height: 100px;
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.03) 0px,
+          rgba(0, 0, 0, 0.03) 2px,
+          transparent 2px,
+          transparent 8px
+        );
+      }
+
+      #root > div {
+        position: relative;
+        z-index: 2;
+      }
+      .works-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 280px;
+        gap: 1.5rem;
+      }
+
+      .work-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0px;
+        cursor: pointer;
+      }
+
+      .work-item--large {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .work-item--portrait {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      .work-item--portrait-large {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .work-item--small {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .work-item--landscape {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .work-item--featured {
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+
+      .work-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1);
+      }
+
+      .work-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0.2) 50%,
+          transparent 100%
+        );
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .work-item:hover .work-overlay {
+        opacity: 0;
+      }
+
+      .work-item:hover .work-img {
+        transform: scale(1.05);
+      }
+
+      .work-info {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+      }
+
+      .work-item:hover .work-info {
+        transform: translateY(20px);
+      }
+
+      .work-title {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 0.25rem;
+      }
+
+      .work-category {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+      }
+
+      .section-watermark {
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        transform: translateY(-50%) rotate(-90deg);
+        font-family: var(--font-heading);
+        font-size: clamp(12rem, 25vw, 30rem);
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.02);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+        letter-spacing: -0.05em;
+        user-select: none;
+        transition: all 0.5s ease-out;
+      }
+
+      .section-watermark:hover {
+        color: rgba(0, 0, 0, 0.05);
+        transform: translateY(-50%) rotate(-90deg) scale(1.05);
+      }
+
+      .section-watermark.flip {
+        left: auto;
+        right: -5%;
+        transform: translateY(-50%) rotate(90deg);
+      }
+
+      .pdf-gallery {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.6) 0%,
+          rgba(255, 255, 255, 0.4) 50%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+      }
+
+      .pdf-gallery img {
+        position: absolute;
+        width: 40%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow:
+          0 0px 2px rgba(0, 0, 0, 0.01),
+          0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease-out;
+      }
+
+      .pdf-gallery img.page:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(3deg);
+      }
+
+      .pdf-gallery img.page:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(6deg);
+      }
+
+      .pdf-gallery img.page:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(9deg);
+      }
+
+      .pdf-gallery:hover img.cover {
+        transform: translate(-50%, -50%) rotate(-5deg);
+      }
+
+      .pdf-gallery:hover img.page:nth-child(1) {
+        transform: translate(calc(-50% + 30px), calc(-50% - 30px)) rotate(15deg);
+      }
+
+      .pdf-gallery:hover img.page:nth-child(2) {
+        transform: translate(calc(-50% - 40px), calc(-50% + 40px))
+          rotate(-15deg);
+      }
+
+      .pdf-gallery:hover img.page:nth-child(3) {
+        transform: translate(calc(-50% + 50px), calc(-50% + 50px)) rotate(28deg);
+      }
+
+      .nadrilleno-player {
+        padding: 3rem 1.5rem;
+        background: #ffffff;
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nadrilleno-container {
+        display: flex;
+        gap: 50px;
+        width: 90vw;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .nadrilleno-content {
+        text-align: left;
+        letter-spacing: -0.01em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .nadrilleno-header {
+        margin-bottom: 1.2rem;
+      }
+
+      .nadrilleno-label {
+        font-family: "SF Mono", "Fira Code", monospace;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+      }
+
+      .nadrilleno-track {
+        margin-bottom: 1.5rem;
+      }
+
+      .nadrilleno-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin: 0 0 0.25rem 0;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #1a1a1a;
+        text-transform: uppercase;
+      }
+
+      .nadrilleno-artist {
+        font-size: 1rem;
+        font-weight: 450;
+        color: #5c5c5c;
+        margin: 0;
+        letter-spacing: -0.2px;
+      }
+
+      .nadrilleno-progress-area {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 1.8rem 0 1.5rem 0;
+      }
+
+      .nadrilleno-time {
+        font-family: "SF Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 450;
+        color: #8c8c8c;
+        min-width: 38px;
+        letter-spacing: 0.2px;
+      }
+
+      .nadrilleno-slider {
+        flex: 1;
+        height: 3px;
+        -webkit-appearance: none;
+        background: #e2e2e2;
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .nadrilleno-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 10px;
+        height: 10px;
+        background: #1a1a1a;
+        border-radius: 50%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: 0.1s;
+      }
+
+      .nadrilleno-slider::-webkit-slider-thumb:hover {
+        transform: scale(1.2);
+        background: #000;
+      }
+
+      .nadrilleno-footer {
+        margin-bottom: 1.2rem;
+        border-top: 1px dashed #ececec;
+        padding-top: 1rem;
+      }
+
+      .nadrilleno-label-small {
+        font-family: "SF Mono", monospace;
+        font-size: 0.6rem;
+        letter-spacing: 0.22em;
+        color: #b0b0b0;
+        text-transform: uppercase;
+      }
+
+      .nadrilleno-controls {
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+      }
+
+      .nadrilleno-controls > div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nadrilleno-play-btn {
+        background: none;
+        border: 1px solid #d4d4d4;
+        font-size: 0.9rem;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #2c2c2c;
+        font-family: monospace;
+        transition: all 0.2s ease;
+        background: #fafafa;
+      }
+
+      .nadrilleno-play-btn:hover {
+        background: #1a1a1a;
+        color: white;
+        border-color: #1a1a1a;
+      }
+
+      .nadrilleno-status {
+        font-family: monospace;
+        font-size: 0.6rem;
+        letter-spacing: 0.1em;
+        color: #aaa;
+        text-transform: lowercase;
+      }
+
+      .nadrilleno-icon-btn {
+        background: none;
+        border: 1px solid #d4d4d4;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #2c2c2c;
+        transition: all 0.2s ease;
+        background: #fafafa;
+      }
+      .nadrilleno-icon-btn:hover {
+        background: #1a1a1a;
+        color: white;
+        border-color: #1a1a1a;
+      }
+      .play-btn {
+        width: 42px;
+        height: 42px;
+        background: #1a1a1a;
+        color: white;
+        border-color: #1a1a1a;
+      }
+      .play-btn:hover {
+        background: #ff6b35;
+        border-color: #ff6b35;
+      }
+      .nadrilleno-volume {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 8px;
+      }
+      .nadrilleno-volume-slider {
+        width: 100px;
+        height: 3px;
+        -webkit-appearance: none;
+        background: #e2e2e2;
+        border-radius: 3px;
+      }
+      .nadrilleno-volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 10px;
+        height: 10px;
+        background: #1a1a1a;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      @media (max-width: 550px) {
+        .nadrilleno-title {
+          font-size: 2rem;
+        }
+        .nadrilleno-progress-area {
+          gap: 0.5rem;
+        }
+        .nadrilleno-player {
+          padding: 2rem 1rem;
+        }
+        .nadrilleno-volume-slider {
+          width: 60px;
+        }
+        .nadrilleno-icon-btn {
+          width: 32px;
+          height: 32px;
+        }
+        .play-btn {
+          width: 38px;
+          height: 38px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .works-grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: minmax(220px, auto);
+          gap: 1rem;
+          grid-auto-flow: dense;
+        }
+
+        .work-item--large,
+        .work-item--featured,
+        .work-item--landscape {
+          grid-column: span 2;
+        }
+
+        .work-item--portrait,
+        .work-item--portrait-large {
+          grid-row: span 2;
+        }
+
+        .work-item--portrait-large {
+          grid-column: span 2;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section-watermark {
+          /* Bigger on mobile for more impact */
+          font-size: clamp(24rem, 40vw, 60rem);
+        }
+        .works-grid {
+          grid-template-columns: 1fr;
+          grid-auto-rows: auto;
+          gap: 1rem;
+        }
+
+        .work-item {
+          grid-column: span 1 !important;
+          grid-row: span 1 !important;
+        }
+
+        .work-item--portrait,
+        .work-item--portrait-large {
+          aspect-ratio: 3 / 4;
+        }
+
+        .work-item--large,
+        .work-item--featured,
+        .work-item--landscape {
+          aspect-ratio: 16 / 9;
+        }
+
+        .work-item--small {
+          aspect-ratio: 4 / 3;
+        }
+
+        .work-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .pdf-gallery {
+          height: 400px;
+        } 
+
+        .nadrilleno-container {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .nadrilleno-container img {
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
+          margin-top: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading">
+      <div class="spinner"></div>
+    </div>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    <div class="diagonal-lines"></div>
+    <div id="root">
+      <div class="min-h-screen bg-background text-foreground">
+        <nav
+          class="fixed top-0 left-0 right-0 opacity-0 translate-y-full z-50 transition-all duration-500 bg-background/90 backdrop-blur-xl border-b border-border shadow-sm"
+        >
+          <div
+            class="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between"
+          >
+            <a
+              href="./#home"
+              class="font-mono text-xs tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors"
+              >COMPUTER ENGINEER</a
+            >
+            <ul class="hidden md:flex items-center gap-8">
+              <li>
+                <a
+                  href="./#about"
+                  class="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                  >About<span
+                    class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"
+                  ></span
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="./#knowledge"
+                  class="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                  >Knowledge<span
+                    class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"
+                  ></span
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="./#projects"
+                  class="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                  >Projects<span
+                    class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"
+                  ></span
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="./#experience"
+                  class="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                  >Experience<span
+                    class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"
+                  ></span
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="./#contact"
+                  class="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                  >Contact<span
+                    class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"
+                  ></span
+                ></a>
+              </li>
+            </ul>
+            <button class="md:hidden text-foreground z-50">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-menu"
+              >
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </nav>
+        <section
+          id="home"
+          class="min-h-screen relative flex flex-col justify-center overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 opacity-[0.4]"
+            style="
+              background-image:
+                linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+              background-size: 40px 40px;
+            "
+          ></div>
+          <div
+            class="max-w-[1400px] mx-auto px-6 md:px-10 w-full pt-28 md:pt-0"
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center"
+            >
+              <div class="lg:col-span-7 xl:col-span-8">
+                <p
+                  class="font-mono text-xs tracking-[0.2em] text-primary mb-6"
+                  style="opacity: 1; transform: none"
+                >
+                  [ COMPUTER ENGINEER / FULL-STACK ARCHITECT ]
+                </p>
+                <div class="space-y-0">
+                  <div class="flex overflow-hidden">
+                    <span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >Z</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >H</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >E</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >N</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >G</span
+                    >
+                  </div>
+                  <div class="flex overflow-hidden">
+                    <span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >L</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >I</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >N</span
+                    >
+                  </div>
+                  <div class="flex overflow-hidden">
+                    <span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >L</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >E</span
+                    ><span
+                      class="font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-[0.85] tracking-[-0.04em] text-foreground"
+                      style="opacity: 1; transform: none"
+                      >I</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-8 max-w-lg" style="opacity: 1; transform: none">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed"
+                  >
+                    Open to job opportunities worldwide. Passionate about
+                    building polished, intuitive, and thoughtful digital
+                    experiences that leave a mark.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 flex items-center gap-6"
+                  style="opacity: 1; transform: none"
+                >
+                  <a
+                    href="../img/ZLL_CV2025.pdf"
+                    download
+                    class="group flex items-center gap-3 bg-foreground text-background px-6 py-3 font-mono text-xs tracking-[0.15em] uppercase hover:bg-primary hover:text-white transition-all"
+                    >Get CV<span
+                      class="inline-block transition-transform group-hover:translate-x-1"
+                      >→</span
+                    ></a
+                  >
+                  <div class="flex items-center gap-4">
+                    <a
+                      href="https://linkedin.com/in/ZhengLinLei/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-muted-foreground hover:text-primary transition-colors"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-linkedin"
+                      >
+                        <path
+                          d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                        ></path>
+                        <rect width="4" height="12" x="2" y="9"></rect>
+                        <circle cx="4" cy="4" r="2"></circle></svg></a
+                    ><a
+                      href="https://github.com/ZhengLinLei"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-muted-foreground hover:text-primary transition-colors"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-github"
+                      >
+                        <path
+                          d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                        ></path>
+                        <path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a
+                    ><a
+                      href="https://instagram.com/zheng.lei1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-muted-foreground hover:text-primary transition-colors"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-instagram"
+                      >
+                        <rect
+                          width="20"
+                          height="20"
+                          x="2"
+                          y="2"
+                          rx="5"
+                          ry="5"
+                        ></rect>
+                        <path
+                          d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                        ></path>
+                        <line
+                          x1="17.5"
+                          x2="17.51"
+                          y1="6.5"
+                          y2="6.5"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:col-span-5 xl:col-span-4 relative"
+                style="opacity: 1; transform: none"
+              >
+                <div
+                  class="relative aspect-[3/4] max-w-[400px] mx-auto lg:ml-auto overflow-hidden"
+                >
+                  <img
+                    src="../img/me2.jpeg"
+                    alt="Zheng Lin Lei"
+                    class="w-full h-full object-cover grayscale contrast-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"
+                  ></div>
+                </div>
+                <div
+                  class="absolute -bottom-4 -right-4 font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                >
+                  ZLL_2026
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-8 left-1/2 -translate-x-1/2"
+            style="opacity: 1"
+          >
+            <div style="transform: translateY(6.71688px)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-down text-muted-foreground"
+              >
+                <path d="M12 5v14"></path>
+                <path d="m19 12-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+        </section>
+        <section class="_blank h-[100px]"></section>
+        <section id="about" class="py-24 md:py-32 relative overflow-hidden">
+          <div class="section-watermark">ZLL</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <div style="opacity: 1; transform: none">
+              <h2
+                class="font-heading text-4xl md:text-6xl font-black tracking-tight"
+              >
+                WHO AM I <span class="text-primary">/</span>
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 md:mt-16">
+              <div
+                class="relative overflow-hidden aspect-[16/9]"
+                style="opacity: 1; transform: none"
+              >
+                <img
+                  src="../img/me_drone2.jpeg"
+                  alt="Technical workspace"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent"
+                ></div>
+              </div>
+              <div class="space-y-8" style="opacity: 1; transform: none">
+                <div>
+                  <p
+                    class="font-mono text-xs text-primary tracking-[0.15em] mb-3"
+                  >
+                    (me)
+                  </p>
+                  <p class="text-foreground/90 leading-relaxed">
+                    Graduated in Computer Engineering from the Polytechnic
+                    University of Valencia. Passionate about technology,
+                    programming, and entrepreneurship.
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="font-mono text-xs text-primary tracking-[0.15em] mb-3"
+                  >
+                    (about)
+                  </p>
+                  <p class="text-foreground/90 leading-relaxed">
+                    Experienced in web, hardware systems and financial payment
+                    technologies. Thrive in teams and always aim for top
+                    performance. Building polished, intuitive digital
+                    experiences that leave a mark.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="my-16 md:my-20 h-px bg-border"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              <div style="opacity: 1; transform: none">
+                <h3
+                  class="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-8"
+                >
+                  / LANGUAGES
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-baseline gap-4 group">
+                    <span class="font-mono text-xs text-muted-foreground/50"
+                      >(01)</span
+                    ><span
+                      class="font-heading text-lg font-medium group-hover:text-primary transition-colors"
+                      >Spanish</span
+                    ><span
+                      class="flex-1 border-b border-dotted border-border/50"
+                    ></span
+                    ><span class="font-mono text-xs text-muted-foreground"
+                      >Native</span
+                    >
+                  </div>
+                  <div class="flex items-baseline gap-4 group">
+                    <span class="font-mono text-xs text-muted-foreground/50"
+                      >(02)</span
+                    ><span
+                      class="font-heading text-lg font-medium group-hover:text-primary transition-colors"
+                      >Chinese</span
+                    ><span
+                      class="flex-1 border-b border-dotted border-border/50"
+                    ></span
+                    ><span class="font-mono text-xs text-muted-foreground"
+                      >Native</span
+                    >
+                  </div>
+                  <div class="flex items-baseline gap-4 group">
+                    <span class="font-mono text-xs text-muted-foreground/50"
+                      >(03)</span
+                    ><span
+                      class="font-heading text-lg font-medium group-hover:text-primary transition-colors"
+                      >English</span
+                    ><span
+                      class="flex-1 border-b border-dotted border-border/50"
+                    ></span
+                    ><span class="font-mono text-xs text-muted-foreground"
+                      >High</span
+                    >
+                  </div>
+                  <div class="flex items-baseline gap-4 group">
+                    <span class="font-mono text-xs text-muted-foreground/50"
+                      >(04)</span
+                    ><span
+                      class="font-heading text-lg font-medium group-hover:text-primary transition-colors"
+                      >Valencian</span
+                    ><span
+                      class="flex-1 border-b border-dotted border-border/50"
+                    ></span
+                    ><span class="font-mono text-xs text-muted-foreground"
+                      >High</span
+                    >
+                  </div>
+                  <div class="flex items-baseline gap-4 group">
+                    <span class="font-mono text-xs text-muted-foreground/50"
+                      >(05)</span
+                    ><span
+                      class="font-heading text-lg font-medium group-hover:text-primary transition-colors"
+                      >Korean</span
+                    ><span
+                      class="flex-1 border-b border-dotted border-border/50"
+                    ></span
+                    ><span class="font-mono text-xs text-muted-foreground"
+                      >Basic</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div style="opacity: 1; transform: none">
+                <h3
+                  class="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-8"
+                >
+                  / BACKGROUND
+                </h3>
+                <div class="space-y-6">
+                  <div
+                    class="border-l border-border pl-6 py-2 hover:border-primary transition-colors"
+                  >
+                    <p class="font-mono text-xs text-muted-foreground/50 mb-2">
+                      (degree)
+                    </p>
+                    <p class="font-heading text-lg font-semibold">
+                      Polytechnic University of Valencia
+                    </p>
+                    <p class="font-mono text-xs text-primary mt-1">UPV</p>
+                    <p class="text-sm text-muted-foreground mt-1">
+                      Bachelor's Degree in Computer Engineering
+                    </p>
+                  </div>
+                  <div
+                    class="border-l border-border pl-6 py-2 hover:border-primary transition-colors"
+                  >
+                    <p class="font-mono text-xs text-muted-foreground/50 mb-2">
+                      (erasmus)
+                    </p>
+                    <p class="font-heading text-lg font-semibold">
+                      Technical University of Cluj Napoca
+                    </p>
+                    <p class="font-mono text-xs text-primary mt-1">UTCN</p>
+                    <p class="text-sm text-muted-foreground mt-1">
+                      Erasmus+ BIPS in Computer Engineering
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="py-12 border-y border-border overflow-hidden">
+          <div
+            class="flex items-center gap-8 whitespace-nowrap"
+            style="transform: translateX(-3533.98px)"
+          >
+            <span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >JavaScript<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >TypeScript<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Python<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Rust<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >C/C++<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Java<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >PHP<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >React<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Django<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Laravel<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Flask<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >NodeJS<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >PostgreSQL<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >MongoDB<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >MySQL<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SQLite<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Docker<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Kubernetes<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Git<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Arduino<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >ESP32<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Raspberry Pi<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Solidity<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SAP S/4 Hana<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >HTML<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >CSS<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SASS<span class="ml-8 text-primary/30">•</span></span
+            >
+            <span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Maker<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Car ECU Tuning<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >UAV Piloting<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >KiCad<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Embedded Systems<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Betaflight<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SMD Soldering<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >HSM Thales<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >PgCloud<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >ARISR<span class="ml-8 text-primary/30">•</span></span
+            >
+
+            <span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >JavaScript<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >TypeScript<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Python<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Rust<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >C/C++<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Java<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >PHP<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >React<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Django<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Laravel<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Flask<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >NodeJS<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >PostgreSQL<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >MongoDB<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >MySQL<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SQLite<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Docker<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Kubernetes<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Git<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Arduino<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >ESP32<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Raspberry Pi<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Solidity<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SAP S/4 Hana<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >HTML<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >CSS<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SASS<span class="ml-8 text-primary/30">•</span></span
+            >
+            <span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Maker<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Car ECU Tuning<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >UAV Piloting<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >KiCad<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Embedded Systems<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >Betaflight<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >SMD Soldering<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >HSM Thales<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >PgCloud<span class="ml-8 text-primary/30">•</span></span
+            ><span
+              class="font-mono text-xs tracking-[0.1em] text-muted-foreground/60 uppercase flex-shrink-0"
+              >ARISR<span class="ml-8 text-primary/30">•</span></span
+            >
+          </div>
+        </div>
+        <section id="knowledge" class="py-24 md:py-32 relative overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-background via-secondary/60 to-background"
+          ></div>
+          <div class="section-watermark">IOT</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+            <div
+              class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-16"
+              style="opacity: 1; transform: none"
+            >
+              <h2
+                class="font-heading text-4xl md:text-6xl font-black tracking-tight"
+              >
+                KNOWLEDGE <span class="text-primary">/</span>
+              </h2>
+              <p
+                class="font-mono text-xs text-muted-foreground tracking-[0.2em] mt-4 md:mt-0"
+              >
+                / SKILLS
+              </p>
+            </div>
+            <div class="space-y-0 divide-y divide-border/50">
+              <div
+                class="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 hover:bg-white/[0.02] transition-colors px-4 -mx-4"
+                style="opacity: 1; transform: none"
+              >
+                <div class="md:col-span-1">
+                  <span
+                    class="font-mono text-4xl md:text-5xl font-light text-foreground/[0.06] group-hover:text-primary/20 transition-colors"
+                    >01</span
+                  >
+                </div>
+                <div class="md:col-span-3">
+                  <h3
+                    class="font-heading text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                  >
+                    UI/UX &amp; Frontend
+                  </h3>
+                </div>
+                <div class="md:col-span-8">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl"
+                  >
+                    Design is more than looks — it's about clarity and
+                    connection. I design and develop clean, responsive
+                    interfaces that feel intuitive across devices.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 hover:bg-white/[0.02] transition-colors px-4 -mx-4"
+                style="opacity: 1; transform: none"
+              >
+                <div class="md:col-span-1">
+                  <span
+                    class="font-mono text-4xl md:text-5xl font-light text-foreground/[0.06] group-hover:text-primary/20 transition-colors"
+                    >02</span
+                  >
+                </div>
+                <div class="md:col-span-3">
+                  <h3
+                    class="font-heading text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                  >
+                    Backend &amp; Database
+                  </h3>
+                </div>
+                <div class="md:col-span-8">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl"
+                  >
+                    Building solid foundations for applications. I design and
+                    implement scalable backend architectures, manage data
+                    efficiently, and ensure secure communication between
+                    services.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 hover:bg-white/[0.02] transition-colors px-4 -mx-4"
+                style="opacity: 1; transform: none"
+              >
+                <div class="md:col-span-1">
+                  <span
+                    class="font-mono text-4xl md:text-5xl font-light text-foreground/[0.06] group-hover:text-primary/20 transition-colors"
+                    >03</span
+                  >
+                </div>
+                <div class="md:col-span-3">
+                  <h3
+                    class="font-heading text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                  >
+                    Full-Stack Development
+                  </h3>
+                </div>
+                <div class="md:col-span-8">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl"
+                  >
+                    From frontend interactions to backend APIs, I build complete
+                    web solutions with modern stacks that are scalable,
+                    maintainable, and ready for real-world users.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 hover:bg-white/[0.02] transition-colors px-4 -mx-4"
+                style="opacity: 1; transform: none"
+              >
+                <div class="md:col-span-1">
+                  <span
+                    class="font-mono text-4xl md:text-5xl font-light text-foreground/[0.06] group-hover:text-primary/20 transition-colors"
+                    >04</span
+                  >
+                </div>
+                <div class="md:col-span-3">
+                  <h3
+                    class="font-heading text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                  >
+                    DevOps &amp; Systems
+                  </h3>
+                </div>
+                <div class="md:col-span-8">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl"
+                  >
+                    I manage servers, cloud platforms, and containerized
+                    environments with Docker and Kubernetes. Through CI/CD
+                    pipelines and infrastructure as code.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 hover:bg-white/[0.02] transition-colors px-4 -mx-4"
+                style="opacity: 1; transform: none"
+              >
+                <div class="md:col-span-1">
+                  <span
+                    class="font-mono text-4xl md:text-5xl font-light text-foreground/[0.06] group-hover:text-primary/20 transition-colors"
+                    >05</span
+                  >
+                </div>
+                <div class="md:col-span-3">
+                  <h3
+                    class="font-heading text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                  >
+                    Cybersecurity
+                  </h3>
+                </div>
+                <div class="md:col-span-8">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl"
+                  >
+                    I design secure infrastructures with firewalls, intrusion
+                    detection, and encryption strategies; applying best
+                    practices in identity management and compliance.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 hover:bg-white/[0.02] transition-colors px-4 -mx-4"
+                style="opacity: 1; transform: none"
+              >
+                <div class="md:col-span-1">
+                  <span
+                    class="font-mono text-4xl md:text-5xl font-light text-foreground/[0.06] group-hover:text-primary/20 transition-colors"
+                    >06</span
+                  >
+                </div>
+                <div class="md:col-span-3">
+                  <h3
+                    class="font-heading text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                  >
+                    IoT &amp; Hardware
+                  </h3>
+                </div>
+                <div class="md:col-span-8">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl"
+                  >
+                    I build IoT solutions with ESP32, STM32, Arduino, and
+                    Raspberry Pi; integrating sensors, actuators, and custom
+                    electronics with cloud and edge systems.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10 hover:bg-white/[0.02] transition-colors px-4 -mx-4"
+                style="opacity: 1; transform: none"
+              >
+                <div class="md:col-span-1">
+                  <span
+                    class="font-mono text-4xl md:text-5xl font-light text-foreground/[0.06] group-hover:text-primary/20 transition-colors"
+                    >07</span
+                  >
+                </div>
+                <div class="md:col-span-3">
+                  <h3
+                    class="font-heading text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                  >
+                    UAV &amp; Smart Cities
+                  </h3>
+                </div>
+                <div class="md:col-span-8">
+                  <p
+                    class="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl"
+                  >
+                    I work with UAV platforms powered by Betaflight, ArduPilot,
+                    and iNAV; integrating drones into IoT and smart city
+                    infrastructures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="_blank"></section>
+        <section id="projects" class="py-24 md:py-32 relative overflow-hidden">
+          <div class="section-watermark flip">JOB</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <h2
+              class="font-heading text-4xl md:text-6xl font-black tracking-tight mb-4"
+              style="opacity: 1; transform: none"
+            >
+              SELF - PROJECTS <span class="text-primary">/</span>
+            </h2>
+            <p
+              class="font-mono text-xs text-muted-foreground tracking-[0.15em] mb-16"
+              style="opacity: 1"
+            >
+              SELECTED WORKS — MORE ON GITHUB
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+              <a
+                href="https://github.com/aris-radio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_001</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  ARIS-Radio
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  Telecommunication protocol, standard and network architecture
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Telecom</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Protocol</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Network</span
+                  >
+                </div></a
+              ><a
+                href="https://github.com/oroneta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_002</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  Oroneta
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  System management of autonomous drone swarms with detections
+                  and task assignments with AI
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >UAV</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >AI</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >IoT</span
+                  >
+                </div></a
+              ><a
+                href="https://github.com/ZhengLinLei/spimhub-depr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_003</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  SpimHub
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  Editor and MIPS architecture Simulator to execute assembly on
+                  Web
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Assembly</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >MIPS</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Web</span
+                  >
+                </div></a
+              ><a
+                href="https://github.com/ZhengLinLei/waypoint-idea"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_004</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  WayPoint
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  MVP route generator with AI for tourism purpose
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >AI</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Tourism</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >MVP</span
+                  >
+                </div></a
+              ><a
+                href="https://github.com/ZhengLinLei/ZDMP"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_005</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  ZDMP
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  System of ML connected with MQTT to process Industry 4.0
+                  production
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >ML</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >MQTT</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Industry 4.0</span
+                  >
+                </div></a
+              ><a
+                href="https://github.com/ZhengLinLei/pgcloud"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_006</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  PgCloud
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  PostgreSQL cluster orchestrator with PGPool and PgBouncer
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >PostgreSQL</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >DevOps</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Cloud</span
+                  >
+                </div></a
+              ><a
+                href="https://github.com/ZhengLinLei/leelim"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_007</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  LEE LIM
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  Web and backend with PayPal, Stripe and credit card payment
+                  support
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Fintech</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >E-commerce</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Full-Stack</span
+                  >
+                </div></a
+              ><a
+                href="https://github.com/ZhengLinLei/stainx-nft"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-background p-8 md:p-10 hover:bg-secondary/50 transition-all duration-500 relative"
+                style="opacity: 1; transform: none"
+                ><div class="flex items-start justify-between mb-6">
+                  <span
+                    class="font-mono text-[10px] text-muted-foreground/40 tracking-widest"
+                    >PRJ_008</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3
+                  class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  StainX
+                </h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+                  NFT StainX Core generator for the Polygon Network
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Blockchain</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >Solidity</span
+                  ><span
+                    class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border px-2 py-1 group-hover:border-primary/30 group-hover:text-primary/60 transition-colors"
+                    >NFT</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          id="philosophy"
+          class="py-24 md:py-32 border-y border-border relative overflow-hidden"
+        >
+          <div class="section-watermark hidden md:block">I'M</div>
+          <div class="section-watermark flip">THE</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <div class="lg:col-span-7">
+                <p class="font-mono text-xs text-primary tracking-[0.2em] mb-6">
+                  — TODAY AND TOMORROW
+                </p>
+                <h2
+                  class="font-heading text-3xl md:text-5xl font-black tracking-tight leading-[1.2]"
+                >
+                  Build with intention,<br />
+                  ship with empathy,<br />
+                  iterate with curiosity.
+                </h2>
+                <p
+                  class="text-muted-foreground text-base md:text-lg mt-6 leading-relaxed max-w-md"
+                >
+                  Every interface, every line of code, every system — is a tool
+                  for human connection. I believe in clarity over complexity,
+                  and purpose over trends.
+                </p>
+              </div>
+
+              <div class="lg:col-span-5">
+                <div
+                  class="bg-white dark:bg-card border border-border/60 shadow-sm p-6 md:p-8"
+                >
+                  <p
+                    class="font-mono text-xs text-muted-foreground/60 tracking-[0.2em] mb-4"
+                  >
+                    CURRENTLY WORKING
+                  </p>
+                  <div class="flex flex-wrap gap-3">
+                    <span
+                      class="px-4 py-2 border border-border/60 font-mono text-xs tracking-wide text-foreground/80 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-full"
+                      >CAR ECU TUNING</span
+                    >
+                    <span
+                      class="px-4 py-2 border border-border/60 font-mono text-xs tracking-wide text-foreground/80 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-full"
+                      >CANBUS</span
+                    >
+                    <span
+                      class="px-4 py-2 border border-border/60 font-mono text-xs tracking-wide text-foreground/80 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-full"
+                      >FFPGA</span
+                    >
+                    <span
+                      class="px-4 py-2 border border-border/60 font-mono text-xs tracking-wide text-foreground/80 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-full"
+                      >UNITREE</span
+                    >
+                    <span
+                      class="px-4 py-2 border border-border/60 font-mono text-xs tracking-wide text-foreground/80 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-full"
+                      >MECHANICS</span
+                    >
+                    <span
+                      class="px-4 py-2 border border-border/60 font-mono text-xs tracking-wide text-foreground/80 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-full"
+                      >BMS</span
+                    >
+                    <span
+                      class="px-4 py-2 border border-border/60 font-mono text-xs tracking-wide text-foreground/80 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-full"
+                      >PCI DSS</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="experience"
+          class="py-24 md:py-32 relative overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-background via-secondary/60 to-background"
+          ></div>
+          <div class="section-watermark flip">TRY</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+            <h2
+              class="font-heading text-4xl md:text-6xl font-black tracking-tight mb-16"
+              style="opacity: 1; transform: none"
+            >
+              EXPERIENCE <span class="text-primary">/</span>
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+              <div>
+                <h3
+                  class="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-8"
+                >
+                  / WORK
+                </h3>
+                <div class="space-y-0 divide-y divide-border/50">
+                  <div
+                    class="py-6 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <p
+                          class="font-heading text-lg md:text-xl font-semibold group-hover:text-primary transition-colors"
+                        >
+                          DevOps Developer
+                        </p>
+                        <p class="text-sm text-muted-foreground mt-1">
+                          F1-Connecting
+                        </p>
+                      </div>
+                      <span
+                        class="font-mono text-[10px] text-muted-foreground/40 tracking-widest uppercase border border-border/50 px-2 py-1"
+                        >Company</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="py-6 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <p
+                          class="font-heading text-lg md:text-xl font-semibold group-hover:text-primary transition-colors"
+                        >
+                          Digital Lead
+                        </p>
+                        <p class="text-sm text-muted-foreground mt-1">
+                          A Little Spark
+                        </p>
+                      </div>
+                      <span
+                        class="font-mono text-[10px] text-muted-foreground/40 tracking-widest uppercase border border-border/50 px-2 py-1"
+                        >Company</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="py-6 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <p
+                          class="font-heading text-lg md:text-xl font-semibold group-hover:text-primary transition-colors"
+                        >
+                          Project Manager
+                        </p>
+                        <p class="text-sm text-muted-foreground mt-1">
+                          Oroneta
+                        </p>
+                      </div>
+                      <span
+                        class="font-mono text-[10px] text-muted-foreground/40 tracking-widest uppercase border border-border/50 px-2 py-1"
+                        >Self</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="py-6 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <p
+                          class="font-heading text-lg md:text-xl font-semibold group-hover:text-primary transition-colors"
+                        >
+                          Project Manager
+                        </p>
+                        <p class="text-sm text-muted-foreground mt-1">
+                          ARIS Alliance
+                        </p>
+                      </div>
+                      <span
+                        class="font-mono text-[10px] text-muted-foreground/40 tracking-widest uppercase border border-border/50 px-2 py-1"
+                        >Self</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3
+                  class="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-8"
+                >
+                  / SOFT SKILLS
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                  <span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    style="opacity: 1; transform: none"
+                    >PCI Knowledge</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    style="opacity: 1; transform: none"
+                    >Cybersecurity Knowledge</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    style="opacity: 1; transform: none"
+                    >Project Manager</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    style="opacity: 1; transform: none"
+                    >SCRUM Manager</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    style="opacity: 1; transform: none"
+                    >Team Working</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    style="opacity: 1; transform: none"
+                    >Lead Experience</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-8"
+              >
+                / CERTIFICATIONS
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >Google Cybersecurity Cert.</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >SAP S/4 Hana Consultant</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >HSK Chinese Cert.</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >FCE English Cert.</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >ACM Member</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >SQL Injection Hackathon</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >UPV-ITI Hackathon</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >DivalHack Valencia Council</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 py-3 px-4 border-l border-border/50 hover:border-primary transition-colors group"
+                  style="opacity: 1; transform: none"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0"
+                  ></span
+                  ><span
+                    class="text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                    >AdaByron Code Competition</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="_blank"></section>
+        <section id="insights" class="py-24 md:py-32 relative overflow-hidden">
+          <div class="section-watermark">#</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <h2
+              class="font-heading text-4xl md:text-6xl font-black tracking-tight mb-16 text-center"
+            >
+              LATEST INSIGHTS <span class="text-primary">/</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="group border border-border/40 p-6 hover:border-primary/40 transition-all hover:-translate-y-1"
+              >
+                <p
+                  class="font-mono text-[10px] text-primary/60 tracking-widest mb-3"
+                >
+                  TECH / DEVOPS
+                </p>
+                <h3
+                  class="font-heading text-xl font-bold mb-2 group-hover:text-primary transition-colors"
+                >
+                  K8s vs Swarm
+                </h3>
+                <p class="text-sm text-muted-foreground">
+                  Why I prefer Kubernetes for edge computing in drone swarms.
+                </p>
+                <div class="mt-4 text-right">
+                  <span
+                    class="text-xs font-mono text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                    >→ read more</span
+                  >
+                </div>
+              </div>
+              <div
+                class="group border border-border/40 p-6 hover:border-primary/40 transition-all hover:-translate-y-1"
+              >
+                <p
+                  class="font-mono text-[10px] text-primary/60 tracking-widest mb-3"
+                >
+                  HARDWARE / IOT
+                </p>
+                <h3
+                  class="font-heading text-xl font-bold mb-2 group-hover:text-primary transition-colors"
+                >
+                  ESP32 power optimization
+                </h3>
+                <p class="text-sm text-muted-foreground">
+                  Deep sleep tricks that saved 80% battery on my weather
+                  station.
+                </p>
+                <div class="mt-4 text-right">
+                  <span
+                    class="text-xs font-mono text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                    >→ read more</span
+                  >
+                </div>
+              </div>
+              <div
+                class="group border border-border/40 p-6 hover:border-primary/40 transition-all hover:-translate-y-1"
+              >
+                <p
+                  class="font-mono text-[10px] text-primary/60 tracking-widest mb-3"
+                >
+                  UAV / AI
+                </p>
+                <h3
+                  class="font-heading text-xl font-bold mb-2 group-hover:text-primary transition-colors"
+                >
+                  Object detection on edge
+                </h3>
+                <p class="text-sm text-muted-foreground">
+                  Running YOLO on a Raspberry Pi for real-time drone navigation.
+                </p>
+                <div class="mt-4 text-right">
+                  <span
+                    class="text-xs font-mono text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                    >→ read more</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="my-works" class="py-24 md:py-32 relative overflow-hidden">
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <h2
+              class="font-heading text-4xl md:text-6xl font-black tracking-tight mb-4 text-center"
+            >
+              MY LIFE <span class="text-primary">/</span>
+            </h2>
+            <p
+              class="subtitle font-mono text-xs text-muted-foreground tracking-[0.15em] mb-16 text-center"
+            >
+              EXPLORING CODE, HARDWARE, CREATIVITY & NATURE
+            </p>
+
+            <div class="works-grid">
+              <div class="work-item work-item--small">
+                <img
+                  src="../img/grid/drone_swarm.jpeg"
+                  alt="Drone swarm testing"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">UAV Swarm</h3>
+                    <p class="work-category">Hardware / IoT</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--large">
+                <img
+                  src="../img/grid/fpv_drone.jpeg"
+                  alt="FPV drone"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">FPV Drone</h3>
+                    <p class="work-category">Aerial</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--portrait">
+                <img
+                  src="../img/grid/hsm_thales.jpeg"
+                  alt="HSM Thales"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">HSM Thales</h3>
+                    <p class="work-category">Cybersecurity / Network</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--large work-item--landscape">
+                <img
+                  src="../img/grid/robots.jpeg"
+                  alt="Deep Learning Robots"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Deep Learning Robots</h3>
+                    <p class="work-category">Robotics / AI</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--small">
+                <img
+                  src="../img/grid/ecu_tuning.jpeg"
+                  alt="ECU tuning bench"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">ECU Tuning</h3>
+                    <p class="work-category">Automotive</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--portrait">
+                <img
+                  src="../img/grid/racing_drone.jpeg"
+                  alt="Racing drone"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Racing Drone</h3>
+                    <p class="work-category">Aerial / Racing</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--featured">
+                <img
+                  src="../img/grid/tuning_car.jpeg"
+                  alt="Tuning car"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Car Hobby</h3>
+                    <p class="work-category">Automotive</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--portrait">
+                <img
+                  src="../img/grid/carnivorous_plants.jpeg"
+                  alt="Carnivorous plants"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Carnivorous Plants</h3>
+                    <p class="work-category">Botany / Gardening</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--portrait">
+                <img
+                  src="../img/grid/mechanics.jpeg"
+                  alt="Mechanics"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Mechanics</h3>
+                    <p class="work-category">Automotive / Engineering</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--portrait">
+                <img
+                  src="../img/grid/industrial_plc.jpeg"
+                  alt="Industrial PLC"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Industrial PLC</h3>
+                    <p class="work-category">Automation / Control</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--portrait">
+                <img
+                  src="../img/grid/dev_work.jpeg"
+                  alt="Development Setup"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Development Setup</h3>
+                    <p class="work-category">Software / Development</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--large">
+                <img
+                  src="../img/grid/stm32_development.jpeg"
+                  alt="STM32 Development"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">STM32 Development</h3>
+                    <p class="work-category">
+                      Embedded Systems / Microcontrollers
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--large">
+                <img
+                  src="../img/grid/flipper_zero.jpeg"
+                  alt="Flipper Zero"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Flipper Zero</h3>
+                    <p class="work-category">Cybersecurity / Hardware</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--small">
+                <img
+                  src="../img/grid/chef.jpeg"
+                  alt="Sushi Chef"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Sushi Chef</h3>
+                    <p class="work-category">Culinary / Chef</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--portrait-large">
+                <img
+                  src="../img/grid/aris_radio.jpeg"
+                  alt="Aris Radio"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Aris Radio</h3>
+                    <p class="work-category">Electronics / Communication</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--small">
+                <img
+                  src="../img/grid/design.jpeg"
+                  alt="Designer"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Designer</h3>
+                    <p class="work-category">Creative / Design</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--small">
+                <img
+                  src="../img/grid/lora.jpeg"
+                  alt="LoRa Module"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">LoRa Module</h3>
+                    <p class="work-category">IoT / Communication</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--small">
+                <img src="../img/grid/me.jpeg" alt="Me" class="work-img" />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">Me</h3>
+                    <p class="work-category">Personal / About</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--large">
+                <img
+                  src="../img/grid/fpv_view.jpeg"
+                  alt="FPV View"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">FPV View</h3>
+                    <p class="work-category">Drones / Aerial Photography</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-item work-item--large">
+                <img
+                  src="../img/grid/pcb_design.png"
+                  alt="PCB Design"
+                  class="work-img"
+                />
+                <div class="work-overlay">
+                  <div class="work-info">
+                    <h3 class="work-title">PCB Design</h3>
+                    <p class="work-category">Electronics / Hardware</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="_blank"></section>
+        <section
+          id="open-source-deep"
+          class="py-24 md:py-32 relative overflow-hidden"
+        >
+          <div class="section-watermark">PDF</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <h2
+              class="font-heading text-4xl md:text-6xl font-black tracking-tight mb-4"
+            >
+              OPEN SOURCE <span class="text-primary">/</span> DEEP DIVE
+            </h2>
+            <p
+              class="subtitle font-mono text-xs text-muted-foreground tracking-[0.15em] mb-16"
+            >
+              TECHNICAL REPORTS & <br />ARCHITECTURE OVERVIEWS
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div
+                class="bg-background group bg-card/30 border border-border/40 rounded-2xl overflow-hidden hover:border-primary/40 transition-all hover:-translate-y-1 relative"
+              >
+                <div class="pdf-gallery">
+                  <img
+                    src="../img/book/pgcloud/p3.jpg"
+                    alt="pgcloud book content"
+                    class="page"
+                  />
+                  <img
+                    src="../img/book/pgcloud/p2.jpg"
+                    alt="pgcloud book content"
+                    class="page"
+                  />
+                  <img
+                    src="../img/book/pgcloud/p1.jpg"
+                    alt="pgcloud book content"
+                    class="page"
+                  />
+                  <img
+                    src="../img/book/pgcloud/pgcloud_cover.jpg"
+                    alt="pgcloud book cover"
+                    class="cover"
+                  />
+                </div>
+                <div class="p-6 md:p-8">
+                  <div class="flex items-start justify-between mb-4">
+                    <span
+                      class="font-mono text-[10px] text-primary/60 tracking-widest"
+                      >PGCLOUD</span
+                    >
+                    <span
+                      class="font-mono text-[10px] text-muted-foreground/40 border border-border/40 px-2 py-1 rounded"
+                      >PDF v0.0.7</span
+                    >
+                  </div>
+                  <h3
+                    class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                  >
+                    PostgreSQL Cluster <br />Orchestrator
+                  </h3>
+                  <p class="text-muted-foreground text-sm leading-relaxed mb-6">
+                    Complete technical report on the architecture, deployment
+                    and high‑availability strategies of
+                    <strong>pgcloud</strong>: PostgreSQL 16 + Pgpool II +
+                    PgBouncer with Docker. Includes performance benchmarks,
+                    failover tests and configuration best practices.
+                  </p>
+                  <div class="flex flex-wrap gap-3 mb-6">
+                    <span
+                      class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border/60 px-2 py-1 rounded-full"
+                      >PostgreSQL</span
+                    >
+                    <span
+                      class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border/60 px-2 py-1 rounded-full"
+                      >Pgpool II</span
+                    >
+                    <span
+                      class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border/60 px-2 py-1 rounded-full"
+                      >Docker</span
+                    >
+                  </div>
+                  <a
+                    href="../img/PgCloud_The_Master_Book_v0.0.7.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm font-mono text-primary border border-primary/30 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all group/btn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-file-text"
+                    >
+                      <path
+                        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                      />
+                      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                      <path d="M10 9H8" />
+                      <path d="M16 13H8" />
+                      <path d="M16 17H8" />
+                    </svg>
+                    <span>View full report (PDF)</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="group-hover/btn:translate-x-0.5 transition-transform"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="bg-background group bg-card/30 border border-border/40 rounded-2xl overflow-hidden hover:border-primary/40 transition-all hover:-translate-y-1"
+              >
+                <div class="pdf-gallery bg-zinc-100">
+                  <img
+                    src="../img/book/tfg/p3.jpg"
+                    alt="tfg book content"
+                    class="page"
+                  />
+                  <img
+                    src="../img/book/tfg/p2.jpg"
+                    alt="tfg book content"
+                    class="page"
+                  />
+                  <img
+                    src="../img/book/tfg/p1.jpg"
+                    alt="tfg book content"
+                    class="page"
+                  />
+                  <img
+                    src="../img/book/tfg/tfg_cover.jpg"
+                    alt="tfg book cover"
+                    class="cover"
+                  />
+                </div>
+                <div class="p-6 md:p-8">
+                  <div class="flex items-start justify-between mb-4">
+                    <span
+                      class="font-mono text-[10px] text-primary/60 tracking-widest"
+                      >ARIS‑RADIO</span
+                    >
+                    <span
+                      class="font-mono text-[10px] text-muted-foreground/40 border border-border/40 px-2 py-1 rounded"
+                      >PDF v1.0</span
+                    >
+                  </div>
+                  <h3
+                    class="font-heading text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors"
+                  >
+                    Telecommunication Protocol & Network Architecture
+                  </h3>
+                  <p class="text-muted-foreground text-sm leading-relaxed mb-6">
+                    (Bachelor Thesis) In‑depth specification of the
+                    <strong>ARIS‑Radio</strong> protocol stack, network topology
+                    and physical layer design. Covers modulation schemes, error
+                    correction, and real‑world deployment in IoT environments.
+                  </p>
+                  <div class="flex flex-wrap gap-3 mb-6">
+                    <span
+                      class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border/60 px-2 py-1 rounded-full"
+                      >Telecom</span
+                    >
+                    <span
+                      class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border/60 px-2 py-1 rounded-full"
+                      >LoRa / RF</span
+                    >
+                    <span
+                      class="font-mono text-[10px] tracking-[0.1em] uppercase text-muted-foreground/50 border border-border/60 px-2 py-1 rounded-full"
+                      >Network Arch</span
+                    >
+                  </div>
+                  <a
+                    href="../img/ZhengLinLei_TFG_2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm font-mono text-primary border border-primary/30 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all group/btn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-file-text"
+                    >
+                      <path
+                        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                      />
+                      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                      <path d="M10 9H8" />
+                      <path d="M16 13H8" />
+                      <path d="M16 17H8" />
+                    </svg>
+                    <span>View full report (PDF)</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="group-hover/btn:translate-x-0.5 transition-transform"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <p
+              class="text-center text-xs font-mono text-muted-foreground/60 mt-12"
+            >
+              These PDFs contain detailed technical documentation — feel free to
+              download and share under the same open‑source license.
+            </p>
+          </div>
+        </section>
+
+        <section class="nadrilleno-player">
+          <div class="nadrilleno-container">
+            <img
+              src="../img/forya.jpg"
+              alt="FOR YA COVER"
+              id="nadCoverImg"
+              class="nadrilleno-cover"
+            />
+            <div class="nadrilleno-content">
+              <div class="nadrilleno-header">
+                <span class="nadrilleno-label text-primary">NOW PLAYING</span>
+              </div>
+              <div class="nadrilleno-track">
+                <h3 class="nadrilleno-title" id="nadTrackTitle">FOR YA</h3>
+                <p class="nadrilleno-artist text-muted" id="nadTrackArtist">
+                  JIANG XIAONI (蒋小呢)
+                </p>
+              </div>
+              <div class="nadrilleno-progress-area">
+                <span class="nadrilleno-time" id="nadCurrentTime">0:00</span>
+                <input
+                  type="range"
+                  id="nadProgress"
+                  class="nadrilleno-slider"
+                  value="0"
+                  step="0.01"
+                />
+                <span class="nadrilleno-time" id="nadDuration">0:00</span>
+              </div>
+              <div class="nadrilleno-footer">
+                <span class="nadrilleno-label-small flex gap-3">
+                  CONNECT WITH MUSIC -
+                  <a
+                    href="https://open.spotify.com/user/31qdbjx77z6txxaa2czybpkycvga?si=ac5d15ddd019406f"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary hover:underline flex gap-2 items-center"
+                  >
+                    SPOTIFY
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M15 3h6v6"></path>
+                      <path d="M10 14 21 3"></path>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+
+              <div class="nadrilleno-controls flex items-center justify-between">
+                <div>
+                  <button
+                    id="nadPrevBtn"
+                    class="nadrilleno-icon-btn"
+                    title="Anterior"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polygon points="19 20 9 12 19 4 19 20"></polygon>
+                      <line x1="5" y1="19" x2="5" y2="5"></line>
+                    </svg>
+                  </button>
+
+                  <button
+                    id="nadPlayBtn"
+                    class="nadrilleno-icon-btn play-btn"
+                    title="Reproducir/Pausar"
+                  >
+                    <svg
+                      id="playSvg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <svg
+                      id="pauseSvg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      style="display: none"
+                    >
+                      <rect x="6" y="4" width="4" height="16"></rect>
+                      <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                  </button>
+
+                  <button
+                    id="nadNextBtn"
+                    class="nadrilleno-icon-btn"
+                    title="Siguiente"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                      <line x1="19" y1="5" x2="19" y2="19"></line>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="nadrilleno-volume">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polygon
+                      points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+                    ></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                  </svg>
+                  <input
+                    type="range"
+                    id="nadVolume"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.7"
+                    class="nadrilleno-volume-slider"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <audio id="nadAudio" preload="metadata"></audio>
+        </section>
+
+        <p
+          class="text-center text-xs font-mono text-muted-foreground/60 mt-12"
+        >
+        <a href="https://kauman.me" class="text-primary hover:underline">@Kauman</a> thanks you for the inspiration
+        </p>
+
+        <section class="_blank"></section>
+        <section id="contact" class="py-24 md:py-32 relative overflow-hidden">
+          <div class="section-watermark flip">ME</div>
+          <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <h2
+              class="font-heading text-4xl md:text-6xl font-black tracking-tight mb-4"
+              style="opacity: 1; transform: none"
+            >
+              LET'S CONNECT <span class="text-primary">/</span>
+            </h2>
+            <p
+              class="subtitle font-mono text-xs text-muted-foreground tracking-[0.15em] mb-16"
+              style="opacity: 1"
+            >
+              OPEN TO OPPORTUNITIES WORLDWIDE
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              <div class="space-y-0 divide-y divide-border/50">
+                <a
+                  href="https://github.com/ZhengLinLei"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between py-5 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                  style="opacity: 1; transform: none"
+                  ><div class="flex items-center gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-github text-muted-foreground group-hover:text-primary transition-colors"
+                    >
+                      <path
+                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                      ></path>
+                      <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                    </svg>
+                    <div>
+                      <p
+                        class="font-heading text-sm font-semibold group-hover:text-primary transition-colors"
+                      >
+                        GitHub
+                      </p>
+                      <p class="font-mono text-xs text-muted-foreground">
+                        @ZhengLinLei
+                      </p>
+                    </div>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path></svg></a
+                ><a
+                  href="https://linkedin.com/in/ZhengLinLei/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between py-5 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                  style="opacity: 1; transform: none"
+                  ><div class="flex items-center gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-linkedin text-muted-foreground group-hover:text-primary transition-colors"
+                    >
+                      <path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                      ></path>
+                      <rect width="4" height="12" x="2" y="9"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <div>
+                      <p
+                        class="font-heading text-sm font-semibold group-hover:text-primary transition-colors"
+                      >
+                        LinkedIn
+                      </p>
+                      <p class="font-mono text-xs text-muted-foreground">
+                        ZhengLinLei
+                      </p>
+                    </div>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path></svg></a
+                ><a
+                  href="https://instagram.com/zheng.lei1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between py-5 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                  style="opacity: 1; transform: none"
+                  ><div class="flex items-center gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-instagram text-muted-foreground group-hover:text-primary transition-colors"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        x="2"
+                        y="2"
+                        rx="5"
+                        ry="5"
+                      ></rect>
+                      <path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                      ></path>
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                    <div>
+                      <p
+                        class="font-heading text-sm font-semibold group-hover:text-primary transition-colors"
+                      >
+                        Instagram
+                      </p>
+                      <p class="font-mono text-xs text-muted-foreground">
+                        @zheng.lei1
+                      </p>
+                    </div>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path></svg></a
+                ><a
+                  href="https://zll.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between py-5 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                  style="opacity: 1; transform: none"
+                  ><div class="flex items-center gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-globe text-muted-foreground group-hover:text-primary transition-colors"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path
+                        d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                      ></path>
+                      <path d="M2 12h20"></path>
+                    </svg>
+                    <div>
+                      <p
+                        class="font-heading text-sm font-semibold group-hover:text-primary transition-colors"
+                      >
+                        Website
+                      </p>
+                      <p class="font-mono text-xs text-muted-foreground">
+                        zll.me
+                      </p>
+                    </div>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path></svg></a
+                ><a
+                  href="mailto:zheng9112003@icloud.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between py-5 group hover:bg-white/[0.02] px-4 -mx-4 transition-colors"
+                  style="opacity: 1; transform: none"
+                  ><div class="flex items-center gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-mail text-muted-foreground group-hover:text-primary transition-colors"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path
+                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                      ></path>
+                    </svg>
+                    <div>
+                      <p
+                        class="font-heading text-sm font-semibold group-hover:text-primary transition-colors"
+                      >
+                        Email
+                      </p>
+                      <p class="font-mono text-xs text-muted-foreground">
+                        zheng9112003@icloud.com
+                      </p>
+                    </div>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link text-muted-foreground/30 group-hover:text-primary transition-colors"
+                  >
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path></svg
+                ></a>
+              </div>
+              <div style="opacity: 1; transform: none">
+                <h3
+                  class="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-6"
+                >
+                  / HOBBIES
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                  <span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Gym &amp; Fitness</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Rubik's Cube</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Drone Racing</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Personal Projects</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Graphic Design &amp; UI/UX</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >FPV Drones</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Cars</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Robotics &amp; Electronics</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Hackathons</span
+                  ><span
+                    class="font-mono text-xs tracking-[0.05em] text-muted-foreground border border-border px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                    >Contributing to Open Source</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="border-t border-border py-8 mb-16">
+          <div
+            class="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4"
+          >
+            <p
+              class="font-mono text-[10px] tracking-[0.2em] text-muted-foreground/40 uppercase"
+            >
+              © 2026 Zheng Lin Lei — All rights reserved
+            </p>
+            <p
+              class="font-mono text-[10px] tracking-[0.2em] text-muted-foreground/40 uppercase"
+            >
+              Computer Engineer / Valencia, Spain
+            </p>
+          </div>
+        </footer>
+      </div>
+      <div
+        class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"
+      >
+        <div
+          class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"
+        ></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script crossorigin="" src="../js/paper.js" type="module"></script>
+  </body>
+</html>
