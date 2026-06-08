@@ -3,6 +3,22 @@
 // ============================================
 document.addEventListener("DOMContentLoaded", () => {
   (function () {
+    const header = document.querySelector("nav");
+
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll) {
+        header.classList.add("hidden-scroll");
+      } else {
+        header.classList.remove("hidden-scroll");
+      }
+
+      lastScroll = currentScroll;
+    });
+
     const navLinks = document.querySelectorAll(
       'nav a[href^="#"], nav a[href^="./#"]',
     );
@@ -47,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "top-full",
           "left-0",
           "right-0",
-          "bg-background/95",
+          "bg-background/90",
           "backdrop-blur-lg",
           "p-6",
           "gap-4",
@@ -69,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "top-full",
           "left-0",
           "right-0",
-          "bg-background/95",
+          "bg-background/90",
           "backdrop-blur-lg",
           "p-6",
           "gap-4",
@@ -609,6 +625,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const playSvg = document.getElementById("playSvg");
     const pauseSvg = document.getElementById("pauseSvg");
 
+    const volumeIconBtn = document.querySelector(".nadrilleno-volume svg");
+
     let currentIndex = 0;
     let isPlaying = false;
 
@@ -617,6 +635,51 @@ document.addEventListener("DOMContentLoaded", () => {
       const mins = Math.floor(sec / 60);
       const secs = Math.floor(sec % 60);
       return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
+    }
+
+    function updateVolumeIcon(volume) {
+      if (!volumeIconBtn) return;
+
+      volumeIconBtn.innerHTML = "";
+
+      const svgNS = "http://www.w3.org/2000/svg";
+      let paths = [];
+
+      if (volume === 0) {
+        paths.push(
+          `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>`,
+          `<line x1="23" y1="9" x2="17" y2="15"></line>`,
+          `<line x1="17" y1="9" x2="23" y2="15"></line>`,
+        );
+      } else if (volume < 0.33) {
+        paths.push(
+          `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>`,
+          `<path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>`,
+        );
+      } else if (volume < 0.66) {
+        paths.push(
+          `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>`,
+          `<path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>`,
+          `<path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>`,
+        );
+      } else {
+        paths.push(
+          `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>`,
+          `<path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>`,
+          `<path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>`,
+          `<path d="M22.6 1.4a15 15 0 0 1 0 21.2"></path>`,
+        );
+      }
+
+      volumeIconBtn.innerHTML = paths.join("");
+      volumeIconBtn.setAttribute("width", "18");
+      volumeIconBtn.setAttribute("height", "18");
+      volumeIconBtn.setAttribute("viewBox", "0 0 29 24");
+      volumeIconBtn.setAttribute("fill", "none");
+      volumeIconBtn.setAttribute("stroke", "currentColor");
+      volumeIconBtn.setAttribute("stroke-width", "2");
+      volumeIconBtn.setAttribute("stroke-linecap", "round");
+      volumeIconBtn.setAttribute("stroke-linejoin", "round");
     }
 
     function loadTrack(index) {
@@ -674,11 +737,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!isNaN(audio.duration))
         audio.currentTime = (e.target.value / 100) * audio.duration;
     });
-    volumeSlider.addEventListener(
-      "input",
-      (e) => (audio.volume = e.target.value),
-    );
-    audio.volume = volumeSlider.value;
+
+    volumeSlider.addEventListener("input", (e) => {
+      const vol = parseFloat(e.target.value);
+      audio.volume = vol;
+      updateVolumeIcon(vol);
+    });
+
+    audio.volume = parseFloat(volumeSlider.value);
+    updateVolumeIcon(audio.volume);
 
     loadTrack(0);
     setUI(false);
