@@ -58,6 +58,7 @@
     const unlock = () => html.classList.remove('locked');
     if (!window.gsap || !window.ScrollTrigger || reduce) {
         html.classList.remove('js'); unlock();
+        $$('#loader').forEach(e => e.remove());
         $$('.quote').forEach(e => { e.style.opacity = 1; });
         return;
     }
@@ -137,7 +138,6 @@
         if (el.dataset.b === 'pop') gsap.set(P.kids, { opacity: 0, scale: .4 });
     };
 
-    /* ================= agents (real-time, live-tracking) ================= */
     const layer = $('#agents');
     const css = getComputedStyle(html);
     const statusEl = $('#status'), dotEl = $('.hud .status i');
@@ -149,8 +149,8 @@
         a.mq = mk('mq', '<i></i><i></i><i></i><i></i><b></b>'); a.lbl = a.mq.querySelector('b');
         a.cur = mk('cur', `<svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 2l7.6 19.2 2.7-8 7.9-2.8z" fill="${color}" stroke="#000" stroke-width="1.3" stroke-linejoin="round"/></svg><span>${name}</span>`);
         [a.gh, a.gv, a.caret, a.mq, a.cur].forEach(e => e.style.setProperty('--c', color));
-        a.x = [-80, innerWidth / 2, innerWidth + 40][i]; a.y = [innerHeight * .35, -80, innerHeight * .65][i];
-        gsap.set(a.cur, { x: a.x, y: a.y });
+        a.x = innerWidth / 2 + (i - 1) * Math.min(110, innerWidth * .22) - 40; a.y = innerHeight / 2 - 24;
+        gsap.set(a.cur, { x: a.x, y: a.y, scale: 0, opacity: 0 });
         return a;
     });
     const ROLE = { frame: 'layout', pop: 'layout', type: 'type', words: 'type', img: 'media' };
@@ -160,7 +160,6 @@
     const place = (a, x, y) => { a.x = Math.min(x, maxX()); a.y = y; gsap.set(a.cur, { x: a.x, y: a.y }); };
     const backlog = () => AG.reduce((n, a) => n + a.q.length, 0);
     const speed = () => Math.min(1 + backlog() * .45, 4);
-    // tween a 0→1 driver; onTick re-reads live geometry every frame so pinned / moving targets stay tracked
     const drive = (dur, ease, onTick) => new Promise(res => {
         const o = { p: 0 };
         gsap.to(o, { p: 1, duration: dur / speed(), ease, onUpdate: () => onTick(o.p), onComplete: res });
@@ -274,7 +273,7 @@
                 gsap.to(k, { opacity: 0, scale: .4, duration: .2, ease: 'power2.in' });
             }
         },
-        // backspace: the caret eats the text from the end
+        // backspace
         async type(a, el) {
             const parts = el._p.parts, n = parts.length, per = el.dataset.b === 'words' ? .025 : .012;
             const at = i => parts[Math.max(0, Math.min(i, n - 1))].getBoundingClientRect();
@@ -294,7 +293,6 @@
     };
     UNJOBS.words = UNJOBS.type;
 
-    // between jobs an agent goes quiet where it is: its label folds away and the arrow dims, so it never hides content
     const idle = (a, on) => a.cur.classList.toggle('idle', on);
 
     const pump = async a => {
@@ -306,7 +304,6 @@
             el._queued = false;
             if ((el._state || 'empty') === want) continue;
             const R = el.getBoundingClientRect();
-            // off-screen (fast scroll / nav jump) or on a slide that already left: jump to the end state, no theatrics
             const slide = el.closest('.kn-slide');
             if (R.bottom < -40 || R.top > innerHeight + 40 || R.right < 0 || R.left > innerWidth || (slide && gsap.getProperty(slide, 'opacity') < .3)) {
                 want === 'built' ? finish(el) : reset(el);
@@ -333,7 +330,6 @@
         a.q.push(el);
         pump(a);
     };
-    // scrolling down builds, scrolling back up past the same line takes it apart again
     const watch = el => ScrollTrigger.create({ trigger: el, start: 'top 88%', onEnter: () => dispatch(el), onLeaveBack: () => dispatch(el, false) });
 
     /* ================= opening ================= */
@@ -348,11 +344,9 @@
         .addLabel('photo', '<1.3')
         .fromTo('.hero-photo .ph', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1.8, ease: 'power2.out', force3D: true }, 'photo')
         .from('.hero-side', { opacity: 0, duration: 1 }, 'photo+=.6')
-        // the tagline box fades in just before the writer starts typing into it
         .fromTo('.hero-tag', { opacity: 0 }, { opacity: 1, duration: .8, ease: 'power2.out' }, 'photo+=1.1')
         .call(() => {
             dispatch($('.hero-tag'));
-            gsap.delayedCall(.25, () => dispatch($('#heroPhoto')));
             gsap.delayedCall(.5, () => dispatch($('.hero-bottom .desc')));
             gsap.delayedCall(.8, () => dispatch($('.ctas')));
         }, null, 'photo+=1.5')
@@ -418,7 +412,6 @@
             .call(() => dispatch($('#philosophy .chips'), down()), null, '+=.4')
             .to({}, { duration: .8 });
 
-        // life: columns drift at different speeds; the photos themselves are placed by the agents (see watch below)
         $$('.life .col').forEach((c, i) => gsap.fromTo(c, { y: [60, -30, 110][i] }, { y: [-60, 40, -110][i], ease: 'none', scrollTrigger: { trigger: '#life-grid', start: 'top bottom', end: 'bottom top', scrub: true } }));
 
         ScrollTrigger.create({
@@ -439,10 +432,43 @@
         });
     };
 
-    const fontsReady = Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), new Promise(r => setTimeout(r, 2500))]);
-    fontsReady.then(() => {
+    /* ================= loader ================= */
+    html.classList.add('loading');
+    const spawn = gsap.timeline();
+    AG.forEach((a, i) => {
+        const box = { p: 0 };
+        spawn.set(a.mq, { x: a.x - 14, y: a.y - 14, width: 0, height: 0, opacity: 1 }, .3 + i * .45)
+            .to(box, {
+                p: 1, duration: .35, ease: 'power2.out',
+                onUpdate: () => { const s = 44 * box.p; gsap.set(a.mq, { width: s, height: s }); a.lbl.textContent = `${Math.round(s)} × ${Math.round(s)}`; }
+            }, '<')
+            .to(a.cur, { scale: 1, opacity: 1, duration: .45, ease: 'back.out(2.6)', clearProps: 'opacity' }, '>-.05')
+            .to(a.mq, { opacity: 0, duration: .3 }, '<.15');
+    });
+
+    // real progress. Calculates based on prefetch
+    const eager = $$('img').filter(img => img.loading !== 'lazy');
+    let fontsDone = false;
+    const fontsReady = Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), new Promise(r => setTimeout(r, 2500))]).then(() => { fontsDone = true; });
+    const pageLoaded = new Promise(r => (document.readyState === 'complete' ? r() : addEventListener('load', r, { once: true })));
+    const shown = { v: 0 }, counter = $('#loader .ld-n');
+    const tickCounter = () => {
+        const real = (eager.filter(img => img.complete).length + (fontsDone ? 1 : 0)) / (eager.length + 1);
+        shown.v = Math.max(shown.v, shown.v + (real - shown.v) * .08);
+        counter.textContent = String(Math.round(shown.v * 100)).padStart(3, '0');
+    };
+    gsap.ticker.add(tickCounter);
+
+    Promise.all([fontsReady, pageLoaded, spawn.then()]).then(() => {
+        gsap.ticker.remove(tickCounter);
         scenes();
         ScrollTrigger.refresh();
-        opening.play();
+        gsap.timeline()
+            .to(shown, { v: 1, duration: .4, ease: 'power1.out', onUpdate: () => { counter.textContent = String(Math.round(shown.v * 100)).padStart(3, '0'); } })
+            .to(counter, { opacity: 0, duration: .25 }, '+=.15')
+            .to('#loader .l', { xPercent: -101, duration: 1.2, ease: 'expo.inOut', force3D: true })
+            .to('#loader .r', { xPercent: 101, duration: 1.2, ease: 'expo.inOut', force3D: true }, '<')
+            .call(() => { html.classList.remove('loading'); AG.forEach(a => idle(a, true)); }, null, '-=.3')
+            .call(() => { $('#loader').remove(); opening.play(); });
     });
 })();

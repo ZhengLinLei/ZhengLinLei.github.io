@@ -228,6 +228,48 @@ img {
 }
 
 /* ===== agents ===== */
+/* ===== loader ===== */
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#loader .lh {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50.5%;
+    background: var(--fg);
+    will-change: transform;
+}
+
+#loader .l {
+    left: 0;
+}
+
+#loader .r {
+    right: 0;
+}
+
+#loader .ld-n {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% + 64px);
+    text-align: center;
+    color: #3a3936; // 9.9:1
+}
+
+html:not(.js) #loader {
+    display: none;
+}
+
+.loading #agents {
+    z-index: 101;
+}
+
 #agents {
     position: fixed;
     inset: 0;
@@ -719,6 +761,7 @@ section {
     padding: 8px 14px;
     @include glass(.07, 16px);
 }
+
 .js .hero-tag {
     opacity: 0;
 }
